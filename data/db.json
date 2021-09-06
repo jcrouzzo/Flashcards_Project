@@ -1,0 +1,82 @@
+{
+  "decks": [
+    {
+      "id": 1,
+      "name": "Rendering in React",
+      "description": "React's component structure allows for quickly building a complex web application that relies on DOM manipulation. "
+    },
+    {
+      "name": "React Router",
+      "description": "React Router is a collection of navigational components that compose declaratively with your application.",
+      "id": 2
+    },
+    {
+      "name": "test deck 3",
+      "description": "test deck 3",
+      "id": 3
+    }
+  ],
+  "cards": [
+    {
+      "id": 1,
+      "deckId": 1,
+      "front": "Differentiate between Real DOM and Virtual DOM.",
+      "back": "Virtual DOM updates are faster but do not directly update the HTML. Only the Real DOM can directly update the rendered HTML."
+    },
+    {
+      "id": 2,
+      "front": "How do you modify the state of a different React component?",
+      "back": "Not at all! State is visible to the component only.",
+      "deckId": 1
+    },
+    {
+      "id": 3,
+      "front": "How do you pass data 'down' to a React child component?",
+      "back": "As properties or props",
+      "deckId": 1
+    },
+    {
+      "front": "What path will match the follow Route?\n<Route>\n  <NotFound />\n</Route>",
+      "back": "All paths. A route with no path matches all URL's",
+      "deckId": 2,
+      "id": 4
+    },
+    {
+      "id": 5,
+      "deckId": 2,
+      "front": "What does <Switch> do?",
+      "back": "Renders the first matching child <Route> it finds."
+    },
+    {
+      "cards": [],
+      "front": "b",
+      "back": "b",
+      "deckId": 1,
+      "id": 7
+    },
+    {
+      "front": "What does the <Link> component do?",
+      "back": "It provides the ability to \"link\" to another part of your application in a cleaner way than using href links",
+      "deckId": 2,
+      "id": 8
+    },
+    {
+      "front": "test card 1 ",
+      "back": "test card 1 back\n",
+      "deckId": 3,
+      "id": 9
+    },
+    {
+      "front": "test card 2",
+      "back": "test card 2 back",
+      "deckId": 3,
+      "id": 10
+    },
+    {
+      "front": "test card 3",
+      "back": "test card 3 back",
+      "deckId": 3,
+      "id": 11
+    }
+  ]
+}
