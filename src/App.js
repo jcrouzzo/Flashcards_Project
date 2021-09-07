@@ -35,7 +35,7 @@ function App() {
           <DeckStudy />
         </Route>
         <Route path='/decks/:deckId/edit'>
-          <DeckEdit  setDecks={setDecks}/>
+          <DeckEdit  setDeck={setDeck}/>
         </Route>
         <Route path='/decks/:deckId'>
           <DeckView deck={deck} setDeck={setDeck}/>

@@ -31,7 +31,6 @@ export default function CardsCreate({deck, setDeck}){
         const newCard={'front': cardFront, 'back': cardBack}
        const abortCtrl = new AbortController()
        createCard(deckId, newCard, abortCtrl.signal)
-       .then(() => console.log('deck id', deckId))
        .then(() => {         
          window.alert('card created')
          setCardFront('')

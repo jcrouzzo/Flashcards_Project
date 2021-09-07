@@ -11,7 +11,7 @@ export default function DeckStudy() {
     const [cards, setCards] = useState([]);
     const [deck, setDeck] = useState({})
     const [currentDisplay, setCurrentDisplay] = useState(null);
-    const [curLoc, setCurLoc] = useState(null)
+    const [curLoc, setCurLoc] = useState(0)
     const [label, setLabel] = useState('flip')
 
     //pull cards from api then setCards
@@ -29,8 +29,8 @@ export default function DeckStudy() {
                 acc.push(card.front)
                 acc.push(card.back)
                 return acc
-                }, [])
-)
+                }, []))
+            setCurrentDisplay(cards[0])
         }catch(e){
             if(e==='AbortError'){console.error('aborted cleanup in progress')}
             else{throw e}
@@ -62,7 +62,7 @@ export default function DeckStudy() {
         <div>
              <div className='container'>
                 <nav aria-label="breadcrumb">
-                    <ol className="breadcrumb">
+                    <ol className="breadcrumb"> 
                         <li className="breadcrumb-item"><Link to='/'>Home</Link></li>
                         <li className="breadcrumb-item" aria-current="page">{deck.name}</li>
                         <li className="breadcrumb-item active" aria-current="page">Study</li>

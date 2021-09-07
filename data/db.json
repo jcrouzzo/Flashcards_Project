@@ -2,13 +2,13 @@
   "decks": [
     {
       "id": 1,
-      "name": "Rendering in React deck 1 edited 10p",
+      "name": "Rendering in React 5",
       "description": "React's component structure allows for quickly building a complex web application that relies on DOM manipulation. "
     },
     {
-      "name": "React Router",
-      "description": "React Router is a collection of navigational components that compose declaratively with your application.",
-      "id": 2
+      "id": 2,
+      "name": "React Router 2",
+      "description": "React Router is a collection of navigational components that compose declaratively with your application."
     }
   ],
   "cards": [
@@ -50,12 +50,6 @@
       "id": 7
     },
     {
-      "front": "What does the <Link> component do?",
-      "back": "It provides the ability to \"link\" to another part of your application in a cleaner way than using href links",
-      "deckId": 2,
-      "id": 8
-    },
-    {
       "front": "Is react going better for you?",
       "back": "yes it is! Thanks!",
       "deckId": 1,
@@ -72,6 +66,12 @@
       "back": "test back",
       "deckId": 1,
       "id": 18
+    },
+    {
+      "front": "card",
+      "back": "3",
+      "deckId": 2,
+      "id": 19
     }
   ]
 }

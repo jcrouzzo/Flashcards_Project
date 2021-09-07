@@ -11,7 +11,7 @@ export default function DeckView({deck, setDeck}){
     const{deckId}=params
 
     useEffect(() =>{
-        readDeck(deckId).then((result) => setDeck(result))
+        readDeck(deckId).then(setDeck)
         //eslint-disable-next-line
     }, [])
 

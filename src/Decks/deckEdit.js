@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useHistory, useRouteMatch, Link } from "react-router-dom";
-import { updateDeck ,listDecks, readDeck } from "../utils/api";
+import { updateDeck , readDeck } from "../utils/api";
 import DeckFormComponent from '../Helpers/deckForm.js'
 
 /*
@@ -10,7 +10,7 @@ on form change call handle * change to update the state variables
 once these are changed and submit is clicked use updatedeck function to send updated details using useeffect
 then call updated decklist using setDecks and then redirect to homepage
 */
-export default function DeckEdit({setDecks}) {
+export default function DeckEdit({setDeck}) {
   const [deckName, setDeckName] = useState("");
   const [deckDescription, setDeckDescription] = useState("");
   const history = useHistory()
@@ -33,7 +33,9 @@ export default function DeckEdit({setDecks}) {
       const updatedDeck = {'id':deckId, 'name': deckName, 'description': deckDescription };
       const abortCtrl = new AbortController();
       updateDeck(updatedDeck, abortCtrl.signal)
-        .then(setDecks(listDecks(abortCtrl.signal)))
+      .then(async () =>{
+        const updatedDeck=await readDeck(deckId, abortCtrl.signal)
+        setDeck(updatedDeck)})
         .then(history.push(`/decks/${deckId}`))
         .catch((e) => console.error(e));
     }else{
