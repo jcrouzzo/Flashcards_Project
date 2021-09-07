@@ -18,7 +18,13 @@ export default function DeckRender({decks, setDecks}){
             
             if (window.confirm('Are you sure you want to delete this? it can not be undone.')){
             const abortCtrl = new AbortController()
-            deleteDeck(deckId, abortCtrl.signal).then(history.go(0))
+            deleteDeck(deckId, abortCtrl.signal)
+            .then(async () => {
+                const deckList = await listDecks(abortCtrl.signal);
+                console.log(deckList)
+                setDecks(deckList)
+            })
+            .then(() => history.go(0))
             
             } 
         }

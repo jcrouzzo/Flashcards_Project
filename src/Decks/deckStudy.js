@@ -40,10 +40,12 @@ export default function DeckStudy() {
     
     useLayoutEffect(() => {   
     getCardsandDeck()
-
+    //eslint-disable-next-line
     }, [])
     
-    useEffect(() => setCurrentDisplay(cards[curLoc]), [curLoc])
+    useEffect(() => setCurrentDisplay(cards[curLoc]), 
+    //eslint-disable-next-line
+    [curLoc])
 
     const proceed = () =>{
         if(curLoc < cards.length-1){

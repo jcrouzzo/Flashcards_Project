@@ -12,6 +12,7 @@ export default function DeckView({deck, setDeck}){
 
     useEffect(() =>{
         readDeck(deckId).then((result) => setDeck(result))
+        //eslint-disable-next-line
     }, [])
 
     return(
@@ -31,7 +32,7 @@ export default function DeckView({deck, setDeck}){
         <Link to={`/decks/${deck.id}/cards/new`}><button className="btn btn-primary my-3 mr-2"><span className = 'oi oi-plus' />Add New Card</button></Link>
         <Link to={`/decks/${deck.id}/edit`}><button className="btn btn-secondary my-3"><span className = 'oi oi-pencil' />Edit Deck</button></Link>
         <br />
-        <RenderCards deck={deck} />
+        <RenderCards deck={deck} setDeck={setDeck} />
         </div>
     )
 }

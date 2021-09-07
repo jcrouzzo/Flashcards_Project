@@ -2,32 +2,27 @@
   "decks": [
     {
       "id": 1,
-      "name": "Rendering in React",
+      "name": "Rendering in React deck 1 edited 10p",
       "description": "React's component structure allows for quickly building a complex web application that relies on DOM manipulation. "
     },
     {
       "name": "React Router",
       "description": "React Router is a collection of navigational components that compose declaratively with your application.",
       "id": 2
-    },
-    {
-      "name": "test deck 3",
-      "description": "test deck 3",
-      "id": 3
     }
   ],
   "cards": [
     {
       "id": 1,
-      "deckId": 1,
-      "front": "Differentiate between Real DOM and Virtual DOM.",
+      "deckId": "1",
+      "front": "Differentiate between Real DOM and Virtual DOM. please.",
       "back": "Virtual DOM updates are faster but do not directly update the HTML. Only the Real DOM can directly update the rendered HTML."
     },
     {
       "id": 2,
+      "deckId": "1",
       "front": "How do you modify the state of a different React component?",
-      "back": "Not at all! State is visible to the component only.",
-      "deckId": 1
+      "back": "Not at all! State is visible to the component only."
     },
     {
       "id": 3,
@@ -61,22 +56,22 @@
       "id": 8
     },
     {
-      "front": "test card 1 ",
-      "back": "test card 1 back\n",
-      "deckId": 3,
-      "id": 9
+      "front": "Is react going better for you?",
+      "back": "yes it is! Thanks!",
+      "deckId": 1,
+      "id": 12
     },
     {
-      "front": "test card 2",
-      "back": "test card 2 back",
-      "deckId": 3,
-      "id": 10
+      "id": 13,
+      "deckId": "1",
+      "front": "another new card",
+      "back": "testing the app out"
     },
     {
-      "front": "test card 3",
-      "back": "test card 3 back",
-      "deckId": 3,
-      "id": 11
+      "front": "test card 926p",
+      "back": "test back",
+      "deckId": 1,
+      "id": 18
     }
   ]
 }
